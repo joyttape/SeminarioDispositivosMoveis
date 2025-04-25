@@ -18,7 +18,7 @@ export default function GradientCard({ colors, style, children }) {
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 16,
+    borderRadius: 10,
     padding: 20,
     marginVertical: 10,
     elevation: 3,

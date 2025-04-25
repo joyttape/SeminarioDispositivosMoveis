@@ -51,7 +51,7 @@ export default function WelcomeScreen({ navigation }) {
               style={[styles.button, { backgroundColor: colors.background }]}
               onPress={() => navigation.navigate("WhatIs")}
             >
-              <Text style={[styles.buttonText, { color: colors.primary }]}>
+              <Text style={[styles.buttonText, { color: colors.bt1 }]}>
                 Saiba mais
               </Text>
             </TouchableOpacity>
@@ -79,7 +79,7 @@ export default function WelcomeScreen({ navigation }) {
               style={[styles.button, { backgroundColor: colors.background }]}
               onPress={() => navigation.navigate("Lessons")}
             >
-              <Text style={[styles.buttonText, { color: colors.primary }]}>
+              <Text style={[styles.buttonText, { color: colors.bt2 }]}>
                 Conhecer
               </Text>
             </TouchableOpacity>
@@ -107,7 +107,7 @@ export default function WelcomeScreen({ navigation }) {
               style={[styles.button, { backgroundColor: colors.background }]}
               onPress={() => navigation.navigate("Demo")}
             >
-              <Text style={[styles.buttonText, { color: colors.primary }]}>
+              <Text style={[styles.buttonText, { color: colors.bt1 }]}>
                 Fazer
               </Text>
             </TouchableOpacity>

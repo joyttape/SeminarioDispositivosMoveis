@@ -1,10 +1,7 @@
 {
   "expo": {
-    "name": "Tutorial",
-    "assets": [
-      "./assets/font"
-    ],
-    "slug": "Tutorial",
+    "name": "Tutorial_Final",
+    "slug": "Tutorial_Final",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -26,18 +23,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "5bac6f8d-ddf0-41e7-b8ca-8db628b05ac1"
-      }
-    },
-    "owner": "jottapedros",
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/5bac6f8d-ddf0-41e7-b8ca-8db628b05ac1"
     }
   }
 }

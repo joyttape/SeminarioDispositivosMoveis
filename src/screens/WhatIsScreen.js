@@ -169,14 +169,14 @@ const styles = StyleSheet.create({
     width: 25,
     height: 30,
     marginRight: 10,
-    marginTop: 20
+    marginTop: 20,
   },
   imageic:{
     width:15,
     height: 20, 
     marginRight: 10,
     marginLeft: 10,
-    padding: 10
+    padding: 10,
   },
 
 });

@@ -113,13 +113,16 @@ export default function DemoExample() {
 
   if (finished) {
     return (
-      <View style={styles.containerfinish}>
-        <Image source={require('../imgs/image 4.png')} style={styles.image}></Image>
-        <Text style={[styles.finalText, { color: colors.finalText }]}>Quiz concluído!</Text>
-        <Text style={[styles.finalText, { color: colors.finalText }]}>
-          Você acertou {score} de {questions.length}
-        </Text>
-      </View>
+      <View style={styles.screenBackground}>
+        <View style={[styles.card, { color: colors.card}]}>
+          <Image source={require('../imgs/trofeu.png')} style={styles.image} />
+          <Text style={[styles.congratsText, { color: colors.congratsText}]}>Parabéns</Text>
+          <Text style={styles.scoreText}>{Math.round((score / questions.length) * 100)}% de acerto</Text>
+          <Text  style={[styles.infoText, { color: colors.infoText}]}>
+            Você respondeu {questions.length} perguntas e acertou {score}.
+          </Text>
+        </View>
+    </View>
     );
   }
 
@@ -127,7 +130,7 @@ export default function DemoExample() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.question}>{q.question}</Text>
+      <Text style={[styles.question, { color: colors.question}]}>{q.question}</Text>
 
       {q.options.map((opt, i) => {
         const isCorrect = i === q.answerIndex;
@@ -226,9 +229,44 @@ const styles = StyleSheet.create({
     marginRight: 16,
     paddingTop: -10,
   },
-  containerfinish: {
+  screenBackground: {
     flex: 1,
-    padding: 20,
-    alignItems: "center"
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  card: {
+    backgroundColor: 'white',
+    borderRadius: 15,
+    padding: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '85%',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 8,
+  },
+  trophy: {
+    width: 80,
+    height: 80,
+    marginBottom: 20,
+  },
+  congratsText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 10,
+  },
+  scoreText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#4CAF50', 
+    marginBottom: 20,
+  },
+  infoText: {
+    fontSize: 16,
+    color: '#666',
+    textAlign: 'center',
   }
 });
